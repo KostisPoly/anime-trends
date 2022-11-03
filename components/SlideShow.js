@@ -1,4 +1,3 @@
-import { getUpcomingList } from "../pages/api/upcoming"
 import { useEffect,useState } from "react";
 import styles from "../styles/SlideShow.module.css"
 import ImageSlider from "./ImageSlider"
@@ -20,7 +19,7 @@ export default function SlideShow() {
         return (
             <div className={styles.slideContainer}>
                 <h2>Top Upcomming</h2>
-                <ImageSlider {...upcoming}/>   
+                <ImageSlider {...upcoming}/>
             </div>
     
         )
@@ -28,13 +27,3 @@ export default function SlideShow() {
     
     return <div>LOADING......</div>
 }
-
-// export async function getStaticProps() {
-//     const upcoming = await getUpcomingList();
-
-//     return {
-//         props: {
-//             upcoming: upcoming
-//         }
-//     }
-// }

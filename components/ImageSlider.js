@@ -3,7 +3,6 @@ import styles from "../styles/ImageSlider.module.css"
 
 export default function ImageSlider(props) {
 
-    console.log(props);
     const dataArray = Object.values(props);
     const [ currentIndex, setCurrentIndex ]  = useState(0);
     const countSlides = dataArray.length;

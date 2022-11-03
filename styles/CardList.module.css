@@ -1,0 +1,44 @@
+.container {
+    width: 25%;
+}
+
+.container a {
+    text-decoration: none;
+}
+.card {
+    display: flex;
+    height: 75px;
+    background-color: rgb(27, 42, 48);
+    margin: 8px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out 0s;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    align-items: center;
+    /* display: flex;
+    align-items: center;
+    position: relative; */
+}
+
+.card h1 {
+    min-width: 2rem;
+    text-align: center;
+    color: beige;
+}
+
+.card img {
+    max-width: 55px;
+    max-height: 75px;
+    min-width: 55px;
+    min-height: 75px;
+}
+
+.card p {
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    color: beige;
+}
