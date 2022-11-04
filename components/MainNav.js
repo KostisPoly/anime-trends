@@ -1,12 +1,13 @@
 import styles from '../styles/MainNav.module.css'
 
+
 export default function MainNav() {
   return (
     <div className={styles.mainNav}>
-        <button>BURGER</button>
-        <div>Logo</div>
-        <div>Search field</div>
-        <div>Dark mode checkbox</div>
+      <div>BURGER</div>
+      <div>LOGO</div>
+      <div>Search Field</div>
+      <div>DARK MODE</div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import styles from "../styles/CardList.module.css";
 export default function CardList(props) {
     const dataArray = Object.values(props);
 
-    console.log(dataArray);
+    // console.log(dataArray);
     return (
         <div className={styles.container}>
         <h2>Top Airing Anime</h2>

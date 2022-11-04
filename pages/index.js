@@ -1,9 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Layout from '../components/Layout'
+import SlideShow from '../components/SlideShow'
+import MainSection from '../components/MainSection'
 
-export default function Home() {
+export default function Home(props) {
+
+  const { upcoming, airing, seasonal } = props;
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -12,20 +15,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout/>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <SlideShow {...upcoming} />
+      <MainSection {...props}/>      
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const responseUpcoming = await fetch('https://api.jikan.moe/v4/top/anime?filter=upcoming');
+  const jsonUpcoming = await responseUpcoming.json();
+
+  const responseAiring = await fetch('https://api.jikan.moe/v4/top/anime?filter=airing');
+  const jsonAiring = await responseAiring.json();
+
+  const responseSeasonal = await fetch('https://api.jikan.moe/v4/seasons/now?page=1');
+  const jsonSeasonal = await responseSeasonal.json();
+
+  return {
+    props: {
+      upcoming: jsonUpcoming.data,
+      airing: jsonAiring.data,
+      seasonal: jsonSeasonal.data
+    } 
+  }
 }
