@@ -1,4 +1,5 @@
 import styles from "../styles/CardList.module.css";
+import Link from "next/link";
 
 export default function CardList(props) {
     const dataArray = Object.values(props);
@@ -8,7 +9,11 @@ export default function CardList(props) {
         <div className={styles.container}>
         <h2>Top Airing Anime</h2>
         {dataArray.map((el, index) => (
-            <a key={el.mal_id}>
+            <Link 
+                key={el.mal_id}
+                href='details[id]'
+                as={`details/${el.mal_id}`}
+            >
                 <div
                     className={styles.card}
                 >
@@ -17,7 +22,7 @@ export default function CardList(props) {
                     <p>{el.title}</p>
                 </div>
                 
-            </a>
+            </Link>
         ))}
         </div>
     );

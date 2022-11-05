@@ -22,7 +22,8 @@
 }
 
 .card h1 {
-    min-width: 2rem;
+    width: 2rem;
+    margin: 1rem;
     text-align: center;
     color: beige;
 }
@@ -41,4 +42,5 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     color: beige;
+    margin: 0.5rem;
 }

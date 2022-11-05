@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 1rem;
+}
+
+.subhead {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
