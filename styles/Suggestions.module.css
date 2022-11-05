@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.card {
+    position: relative;
+    margin: 1rem auto;
+    box-shadow: rgb(0, 0, 0, 0.7) -70px -75px 67px -39px inset;
+}
+
+.info {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0;
+}

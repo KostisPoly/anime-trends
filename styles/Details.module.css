@@ -20,3 +20,11 @@
     justify-content: space-around;
     font-size: 1.4rem;
 }
+
+.trailer {
+    text-align: center;
+}
+
+.trailer iframe {
+    border-radius: 2rem;
+}

@@ -1,4 +1,5 @@
 import styles from "../../../styles/Details.module.css"
+import MoreDetails from "../../../components/MoreDetails";
 
 export default function Details({ data }) {
 
@@ -12,7 +13,6 @@ export default function Details({ data }) {
         width: '100%'
     }
     
-    console.log(data);
     return (
         <div
             className={styles.container}
@@ -32,6 +32,7 @@ export default function Details({ data }) {
                         src={data.images.webp.image_url}
                     ></img>
                     <p>&#10026; Score {data.score}</p>
+                    <p>&#9787; Votes {data.scored_by}</p>
                     <a 
                         href={data.url}
                         target="_blank"
@@ -54,12 +55,18 @@ export default function Details({ data }) {
                     <p>{data.synopsis}</p>
                 </div>
             </div>
+            <div
+                className={styles.trailer}
+            >
+                <iframe width='500px' height='345px' src={data.trailer.embed_url}></iframe>
+            </div>
+            <MoreDetails {...data}/>
         </div>
     )
 }
 
 export const getServerSideProps = async (context) => {
-    console.log(context);
+    
     const response = await fetch(`https://api.jikan.moe/v4/anime/${context.params.id}`);
     const json = await response.json();
 
