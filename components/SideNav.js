@@ -1,9 +1,16 @@
 import styles from '../styles/SideNav.module.css'
 import Link from 'next/link'
 
-export default function SideNav() {
+export default function SideNav(props) {
+
+  const { isOpen } = props;
+  
+  const toggleClass = isOpen ? styles.open : styles.closed;
+
   return (
-    <div>
+    <div
+    className={[styles.container, toggleClass].join(' ')}
+    >
       <Link href='all-anime' >ALL ANIME</Link>
       <Link href='about' >ABOUT</Link>
       <Link href='manga' >MANGA</Link>

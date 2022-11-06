@@ -6,6 +6,7 @@
     align-items: center;
     min-height: 80vh;
     min-width: 100%;
+    margin: 1rem;
 }
 
 .slides {
