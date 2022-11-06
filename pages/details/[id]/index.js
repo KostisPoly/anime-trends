@@ -31,12 +31,12 @@ export default function Details({ data }) {
                     <img
                         src={data.images.webp.image_url}
                     ></img>
-                    <p>&#10026; Score {data.score}</p>
-                    <p>&#9787; Votes {data.scored_by}</p>
+                    <p>&#10026; Score: {data.score}</p>
+                    <p>&#9787; Votes: {data.scored_by}</p>
                     <a 
                         href={data.url}
                         target="_blank"
-                    >Follow in MyAnimeList</a>
+                    >Jump to MyAnimeList</a>
                 </div>
                 <div
                     className={styles.info}

@@ -3,7 +3,7 @@ import styles from "../../../styles/Suggestions.module.css";
 export default function suggestions({ data }) {
     
 const dataArray = Object.values(data);
-
+console.log(dataArray);
 
 return (
     <div className={styles.container}>
@@ -18,7 +18,7 @@ return (
             className={styles.info}
             >
             <h3>{el.entry.title}</h3>
-            <p>Follow on MyAnimeList</p>
+            <p>Jump to MyAnimeList</p>
         </a>
         </div>
     ))}

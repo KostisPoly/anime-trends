@@ -18,7 +18,7 @@ export default function episodes({ data }) {
           <a
             href={el.forum_url}
             target="_blank"
-          >Go to Forum</a>
+          >Jump to MyAnimeList</a>
           <p>&#10026; Score: {el.score}</p>
         </div>
       ))}

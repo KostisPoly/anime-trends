@@ -16,7 +16,9 @@ export default function CardList(props) {
                 <div
                     className={styles.card}
                 >
-                    <h1>{index+1}</h1>
+                    <h1
+                        style={{color: (index < 5) ? 'yellowgreen' : '' }}
+                    >{index+1}</h1>
                     <img src={el.images.jpg.small_image_url}></img>
                     <p>{el.title}</p>
                 </div>
