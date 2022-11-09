@@ -7,7 +7,7 @@
 
 .card {
     border: 0.5rem solid;
-    border-color: black;
+    border-color: #CAE565;
     border-radius: 1rem;
     margin: 0.5rem auto;
     width: 50%;
@@ -16,7 +16,7 @@
 }
 
 .card a {
-    background-color: black;
+    background-color: #CAE565;
     border-radius: 0.7rem;
     padding: 0.2rem 1rem;
 }

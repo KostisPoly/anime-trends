@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    width: 80vw;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    background-color: rgb(28, 28, 28);
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 1rem auto;
+}
+
+.container p {
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: gray;
+    background-color: rgb(14, 14, 14);
+    cursor: pointer;
+}
+
+#active {
+    color: yellowgreen;
+}

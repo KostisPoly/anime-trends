@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react'
 import styles from '../styles/MainNav.module.css'
 import SideNav from './SideNav'
@@ -33,8 +34,12 @@ const handleClick = () => {
           }}
         ></div>
       </button>
-      <div>ANIMETRENDS</div>
-      <div>SEARCH FIELD</div>
+      <Link
+        href='/'
+      >
+        <img src='/third.png'></img>
+      </Link>
+      <div><input placeholder='Search'/></div>
       <div>DARK MODE</div>
     </div>
   )

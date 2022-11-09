@@ -22,8 +22,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: gray;
-    color: beige;
+    background-color: #CAE565;
+    color: #FCEFDA;
     border-radius: 0 3rem 3rem 0;
     text-align: center;
 }

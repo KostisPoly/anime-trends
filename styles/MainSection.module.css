@@ -2,3 +2,13 @@
     display: flex;
     margin: 1rem;
 }
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-start;
+}

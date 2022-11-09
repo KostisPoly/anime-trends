@@ -1,7 +1,9 @@
 .mainNav {
     display: flex;
     justify-content: space-around;
-    background-color: beige;
+    background-color: #FCEFDA;
+    height: 20vh;
+    align-items: center;
 }
 
 .mainNav button {
@@ -25,4 +27,14 @@
     transition: transform 0.3s linear 0s;
     position: relative;
     transform-origin: 1px center;
+}
+
+.mainNav input {
+    height: 2rem;
+    width: 100%;
+    border: none;
+    padding: 0px 20px;
+    outline: none;
+    background-color: #CAE565;
+    color: gray;
 }

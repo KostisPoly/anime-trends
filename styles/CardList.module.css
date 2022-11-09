@@ -25,7 +25,7 @@
     width: 2rem;
     margin: 1rem;
     text-align: center;
-    color: beige;
+    color: #FCEFDA;
 }
 
 .card img {
@@ -41,6 +41,6 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     display: -webkit-box;
-    color: beige;
+    color: #FCEFDA;
     margin: 0.5rem;
 }

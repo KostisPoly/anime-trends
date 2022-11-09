@@ -9,7 +9,18 @@ export default function MainSection(props) {
 
     return (
         <div className={styles.main}>
-            <CardGrid {...seasonal}/>
+            <div
+                className={styles.mainSection}
+            >
+                <div
+                className={styles.top}
+            >
+                <h2>Seasonal Anime</h2>
+                <div>&#171;</div>
+                <div>&#187;</div>
+            </div>
+            <CardGrid initial={seasonal}/>
+            </div>
             <CardList {...airing} />
         </div>
     );

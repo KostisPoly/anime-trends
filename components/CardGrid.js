@@ -3,17 +3,13 @@ import styles from "../styles/CardGrid.module.css";
 
 export default function CardGrid(props) {
     
-    const dataArray = Object.values(props);
+    const { initial, data } = props;
+    console.log(props);
+    
+    const dataArray = data?.length > 0 ? data : initial;
 
     return (
         <div className={styles.container}>
-            <div
-                className={styles.top}
-            >
-                <h2>Seasonal Anime</h2>
-                <div>&#171;</div>
-                <div>&#187;</div>
-            </div>
             
             <div
                 className={styles.grid}
