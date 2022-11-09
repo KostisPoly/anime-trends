@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.page{
+    width: 2rem;
+    height: 2re;
+    /* border: 0.5rem solid; */
+    background-color: yellowgreen;
+    color: gray;
+    text-align: center;
+}

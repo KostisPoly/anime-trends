@@ -4,7 +4,6 @@ import styles from "../styles/CardGrid.module.css";
 export default function CardGrid(props) {
     
     const { initial, data } = props;
-    console.log(props);
     
     const dataArray = data?.length > 0 ? data : initial;
 
