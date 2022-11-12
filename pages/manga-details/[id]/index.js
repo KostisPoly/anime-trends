@@ -1,7 +1,7 @@
 import styles from "../../../styles/Details.module.css"
-import MoreDetails from "../../../components/MoreDetails";
 
-export default function Details({ data }) {
+
+export default function MangaDetails({ data }) {
 
     const headStyle = {
         backgroundImage: `url(${data.images.jpg.large_image_url})`,
@@ -12,7 +12,7 @@ export default function Details({ data }) {
         height: '70vh',
         width: '100%'
     }
-    
+
     return (
         <div
             className={styles.container}
@@ -55,20 +55,15 @@ export default function Details({ data }) {
                     <p>{data.synopsis}</p>
                 </div>
             </div>
-            <div
-                className={styles.trailer}
-            >
-                <iframe width='500px' height='345px' src={data.trailer.embed_url}></iframe>
-            </div>
-            <MoreDetails {...data}/>
         </div>
     )
 }
 
 export const getServerSideProps = async (context) => {
     
-    console.log(context);
-    const response = await fetch(`https://api.jikan.moe/v4/anime/${context.params.id}`);
+    
+    const response = await fetch(`https://api.jikan.moe/v4/manga/${context.params.id}/full`);
+    console.log(response);
     const json = await response.json();
 
     return {

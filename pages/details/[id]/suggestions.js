@@ -3,7 +3,6 @@ import styles from "../../../styles/Suggestions.module.css";
 export default function suggestions({ data }) {
     
 const dataArray = Object.values(data);
-console.log(dataArray);
 
 return (
     <div className={styles.container}>

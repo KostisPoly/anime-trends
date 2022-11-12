@@ -12,8 +12,8 @@ export default function SideNav(props) {
     className={[styles.container, toggleClass].join(' ')}
     >
       <Link href='/all-anime' >ALL ANIME</Link>
-      <Link href='/about' >ABOUT</Link>
       <Link href='/manga' >MANGA</Link>
+      <Link href='/about' >ABOUT</Link>
     </div>
   )
 }

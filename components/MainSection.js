@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/MainSection.module.css";
 import CardGrid from "./CardGrid";
 import CardList from "./CardList";
@@ -6,7 +6,6 @@ import Pagination from "./Pagination";
 
 export default function MainSection(props) {
 
-    console.log(props);
     const { seasonal, airing} = props;
     const [page, setPage] = useState(1);
     const [ dataArray, setdataArray ] = useState([]);

@@ -15,9 +15,11 @@
 .open {
     width: 200px;
     z-index: 2;
+    opacity: 1;
 }
 
 .closed {
     width: 0px;
     z-index: -999;
+    opacity: 0;
 }
