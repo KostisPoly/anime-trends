@@ -6,7 +6,10 @@ export default function SlideShow(props) {
     
     if(props) {
         return (
-            <div className={styles.slideContainer}>
+            <div
+                id='slider'
+                className={styles.slideContainer}
+            >
                 <h2>Top Upcomming</h2>
                 <ImageSlider {...props}/>
             </div>

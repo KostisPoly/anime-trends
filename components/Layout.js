@@ -5,10 +5,13 @@ import Image from "next/image";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div
+      id='layout'
+    >
       <MainNav />
       <main
         className={styles.main}
+        id='main'
       >
         {children}
       </main>
@@ -22,6 +25,16 @@ export default function Layout({ children }) {
           Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+        <a
+          href="https://jikan.moe/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          And{' '}
+          <span className={styles.jikan}>
+          &copy; Jikan API
           </span>
         </a>
       </footer>

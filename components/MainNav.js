@@ -1,18 +1,30 @@
 import Link from 'next/link';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/MainNav.module.css'
 import SideNav from './SideNav'
 
 export default function MainNav() {
 
 const [ isOpen, setIsOpen ] = useState(false);
+const [ theme, setTheme ] = useState('light');
 
 const handleClick = () => {
   setIsOpen(current => !current)
 }
 
+const toggleTheme = () => {
+  setTheme(theme === 'light' ? 'dark' : 'light');
+}
+
+useEffect(() => {
+  document.body.className = theme;
+}, [theme])
+
   return (
-    <div className={styles.mainNav}>
+    <div 
+      id='navigation'
+      className={styles.mainNav}
+    >
       <SideNav {...{isOpen}}/>
       <button
         onClick={handleClick}
@@ -40,7 +52,12 @@ const handleClick = () => {
         <img src='/third.png'></img>
       </Link>
       <div><input placeholder='Search'/></div>
-      <div>DARK MODE</div>
+      <div
+        className={styles.toggle}
+        onClick={ toggleTheme }
+      >
+        &#9775;
+      </div>
     </div>
   )
 }

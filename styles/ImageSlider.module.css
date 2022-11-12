@@ -34,7 +34,6 @@
     transform: translate(0, -50%);
     left: 2rem;
     font-size: 3rem;
-    color: black;
     z-index: 1;
     cursor: pointer;
 }
@@ -44,7 +43,6 @@
     transform: translate(0, -50%);
     right: 2rem;
     font-size: 3rem;
-    color: black;
     z-index: 1;
     cursor: pointer;
 }

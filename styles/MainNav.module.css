@@ -38,3 +38,8 @@
     background-color: #CAE565;
     color: gray;
 }
+
+.toggle {
+    cursor: pointer;
+    font-size: 2.2rem;
+}

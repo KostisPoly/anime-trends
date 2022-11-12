@@ -28,7 +28,30 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+.light {
+  background-color: #FCEFDA;
+}
+
+.dark {
+  background-color: #263238;
+  color: aliceblue;
+}
+
+.light #main,
+.light #navigation,
+.light #slider {
+  background-color: #FCEFDA;
+  color: #263238;
+}
+
+.dark #main,
+.dark #navigation,
+.dark #slider {
+  background-color: #263238;
+  color: aliceblue;
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -36,4 +59,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
