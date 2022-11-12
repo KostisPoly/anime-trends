@@ -63,7 +63,6 @@ export const getServerSideProps = async (context) => {
     
     
     const response = await fetch(`https://api.jikan.moe/v4/manga/${context.params.id}/full`);
-    console.log(response);
     const json = await response.json();
 
     return {

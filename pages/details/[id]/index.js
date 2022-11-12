@@ -67,7 +67,6 @@ export default function Details({ data }) {
 
 export const getServerSideProps = async (context) => {
     
-    console.log(context);
     const response = await fetch(`https://api.jikan.moe/v4/anime/${context.params.id}`);
     const json = await response.json();
 

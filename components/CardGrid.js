@@ -6,7 +6,6 @@ export default function CardGrid(props) {
     const { initial, data } = props;
     
     const dataArray = data?.length > 0 ? data : initial;
-    console.log(dataArray);
 
     return (
         <div className={styles.container}>
