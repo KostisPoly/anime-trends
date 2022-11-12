@@ -49,7 +49,7 @@ useEffect(() => {
       <Link
         href='/'
       >
-        <img src='/third.png'></img>
+        <img src='/logo.png'></img>
       </Link>
       <div><input placeholder='Search'/></div>
       <div
